@@ -1,3 +1,18 @@
 page-home {
+    .ion-item-input-group {
+        border: 1px solid #BA265D;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 5px; 
+        
+        ion-label {
+            margin-bottom: 2px;
+        }
 
+        ion-input {
+            font-weight: bold; 
+            font-size: 20px;
+        }
+    }
 }
