@@ -7,18 +7,26 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="ion-item-input-group">
-      <ion-label text-uppercase>From</ion-label>
-      <ion-input type="text"></ion-input>  
-  </div>                
-
-  <div class="ion-item-input-group">
-      <ion-label text-uppercase>To</ion-label>
-      <ion-input type="text"></ion-input>  
-  </div>       
-
-  <button ion-button block color="frypto" outline large icon-left>
-    <ion-icon name="calendar"></ion-icon>
-      Select dates
-  </button>
+  <ion-list no-lines>
+    <ion-item>
+      <div class = "ion-content-group" item-content item-start>
+          <ion-label stacked text-uppercase>From</ion-label>
+          <ion-input type="text"></ion-input>
+      </div>      
+    </ion-item>
+    <ion-item>
+      <div class = "ion-content-group" item-content item-start>
+          <ion-label stacked text-uppercase>To</ion-label>
+          <ion-input type="text"></ion-input>
+      </div>      
+    </ion-item>
+    <ion-item>
+      <div class = "ion-content-group-2" item-content item-start>
+          <button ion-button block color="frypto" outline large icon-left>
+            <ion-icon name="calendar"></ion-icon>
+              Select dates
+          </button>
+      </div>      
+    </ion-item>
+  </ion-list>
 </ion-content>
