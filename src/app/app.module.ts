@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AirportPage } from '../pages/airport/airport';
+import { AirportService } from '../pages/airport/airport.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { AirportPage } from '../pages/airport/airport';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -27,6 +30,7 @@ import { AirportPage } from '../pages/airport/airport';
   providers: [
     StatusBar,
     SplashScreen,
+    AirportService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

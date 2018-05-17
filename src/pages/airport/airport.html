@@ -12,9 +12,9 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-searchbar placeholder="Search Airport" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-searchbar placeholder="Search Airport" 
+    (ionInput)="getItems($event)" [(ngModel)]="search"></ion-searchbar>
   <ion-list>
     <button ion-item *ngFor="let item of items" (click) = "selectedAirport(item)">
       {{ item }}
