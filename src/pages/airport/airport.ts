@@ -30,7 +30,7 @@ export class AirportPage {
     this.flight = this.navParams.get('flight');
     const title = this.searchBy === 'from' ? 'departure' : 'arrival';
     this.viewTitle = `Select ${title} airport`;    
-    this.items = [];
+    this.findAirport("");
   }
 
   doAlert() {
@@ -45,7 +45,11 @@ export class AirportPage {
 
   getItems($event) {
     if(this.search.length >= 3)
-      this.airportService.getAirportBy(this.search)
+      this.findAirport(this.search);
+  }
+
+  findAirport(searchQuery) {
+    this.airportService.getAirportBy(searchQuery)
         .subscribe(data => {
           this.items = data.map(d => d.Code);
         }, error => {

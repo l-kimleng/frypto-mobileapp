@@ -9,11 +9,12 @@ export class AirportService {
     constructor(private _http: HttpClient) { }
 
     getAirportBy(param) {
+        let code = param.length === 3 ? param: "";
         return this._http.get(`${this.baseUrl}/api/airports`, {
                 params: new HttpParams({
                     fromObject: {
-                        name: "",
-                        code: "",
+                        name: param,
+                        code: code,
                         location: param
                     }     
                 })
